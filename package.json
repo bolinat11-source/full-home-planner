@@ -1,19 +1,18 @@
 
 {
-  "name": "full-home-planner",
+  "name": "house-planner-monorepo",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "lint": "turbo run lint"
   },
-  "dependencies": {
-    "autoprefixer": "^10.4.17",
-    "next": "14.1.0",
-    "postcss": "^8.4.24",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tailwindcss": "^3.3.2"
+  "devDependencies": {
+    "turbo": "^1.12.3"
   }
 }
